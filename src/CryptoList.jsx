@@ -1,8 +1,9 @@
 import React from 'react';
 import './CryptoList.css';
 
-function CryptoList(props) {
-  const { cryptoList } = props;
+let  { cryptoList } = props;
+function CryptoList({ cryptoList }) {
+  
 
   const liElements = cryptoList.map((cryptoObj) => (
     <li key={cryptoObj.currency}>
