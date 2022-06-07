@@ -19,6 +19,7 @@
   "rules": {
     "react/function-component-definition": "off",
     "quotes": "off",
-    "linebreak-style": 0
+    "linebreak-style": 0,
+    "no-underscore-dangle": "warn"
   }
 }

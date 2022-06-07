@@ -3,6 +3,5 @@
     "tabWidth": 4,
     "semi": false,
     "singleQuote": true,
-    "quotes": false,
-    "linebreak-style": false
+    "quotes": false
   }

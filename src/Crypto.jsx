@@ -28,14 +28,14 @@ class Crypto extends Component {
       const tickers = res.data;
 
       this.setState((state) => {
-        let newCryptoList = [];
+        const newCryptoList = [];
 
         for (const [ticker, cryptoRate] of Object.entries(tickers)) {
-          let lastCryptoObj = state.cryptoList.find((cryptoObj) => {
-            return cryptoObj.currency === ticker;
+          const lastCryptoObj = state.cryptoList.find((cryptoObj) => {
+            cryptoObj.currency === ticker;
           });
 
-          let newCryptoObj = {
+          const newCryptoObj = {
             currency: ticker,
             symbol: cryptoRate.symbol,
             buy: cryptoRate.buy,
@@ -75,8 +75,8 @@ class Crypto extends Component {
     this._inputFilter.value = this._inputFilter.value.trim().toUpperCase();
 
     this.setState((state) => {
-      let newFilteredCryptoList = state.cryptoList.filter((cryptoObj) => {
-        return cryptoObj.currency.includes(this._inputFilter.value);
+      const newFilteredCryptoList = state.cryptoList.filter((cryptoObj) => {
+        cryptoObj.currency.includes(this._inputFilter.value);
       });
 
       return {
@@ -89,7 +89,7 @@ class Crypto extends Component {
     return (
       <div className="Crypto">
         <input
-          ref={(element) => (this._inputFilter = element)}
+          ref={(element) => {this._inputFilter = element}}
           onChange={this.filterCryptoList}
           type="text"
           placeholder="Filter"
