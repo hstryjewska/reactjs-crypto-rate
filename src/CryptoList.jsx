@@ -1,9 +1,8 @@
-import React from 'react';
-import './CryptoList.css';
-import PropTypes from 'prop-types';
+import React from "react";
+import "./CryptoList.css";
+import PropTypes from "prop-types";
 
-const CryptoList = ({cryptoList}) => {
-
+const CryptoList = ({ cryptoList }) => {
   CryptoList.propTypes = {
     cryptoList: PropTypes.func.isRequired,
   };
@@ -12,15 +11,10 @@ const CryptoList = ({cryptoList}) => {
       <span className="CryptoLabel">Last rate: </span>
       <span className={`CryptoRate ${cryptoObj.cssClass}`}>
         {cryptoObj.lastRate}
-        {' '}
         {cryptoObj.htmlArrow}
       </span>
       <span className="CurrencyTicker">{cryptoObj.currency}</span>
-      <span className="CurrencySymbol">
-        [
-        {cryptoObj.symbol}
-        ]
-      </span>
+      <span className="CurrencySymbol">[{cryptoObj.symbol}]</span>
     </li>
   ));
 
