@@ -14,7 +14,11 @@ const CryptoList = ({ cryptoList }) => {
         {cryptoObj.htmlArrow}
       </span>
       <span className="CurrencyTicker">{cryptoObj.currency}</span>
-      <span className="CurrencySymbol">[{cryptoObj.symbol}]</span>
+      <span className="CurrencySymbol">
+        [
+        {cryptoObj.symbol}
+        ]
+      </span>
     </li>
   ));
 
