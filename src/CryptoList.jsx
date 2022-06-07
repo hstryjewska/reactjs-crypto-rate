@@ -1,13 +1,8 @@
 import React from 'react';
 import './CryptoList.css';
 
-CryptoList.propTypes = {
-  cryptoList: PropTypes.shape({
-      title: PropTypes.string
-  })
-};
-
-function CryptoList({ cryptoList }) {
+function CryptoList({cryptoList}) {
+ 
   const liElements = cryptoList.map((cryptoObj) => (
     <li key={cryptoObj.currency}>
       <span className="CryptoLabel">Last rate: </span>
