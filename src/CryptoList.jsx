@@ -1,8 +1,12 @@
 import React from 'react';
 import './CryptoList.css';
+import PropTypes from 'prop-types';
 
-function CryptoList({cryptoList}) {
- 
+const CryptoList = ({cryptoList}) => {
+
+  CryptoList.propTypes = {
+    cryptoList: PropTypes.func.isRequired,
+  };
   const liElements = cryptoList.map((cryptoObj) => (
     <li key={cryptoObj.currency}>
       <span className="CryptoLabel">Last rate: </span>
@@ -25,6 +29,6 @@ function CryptoList({cryptoList}) {
       <ul className="TheList">{liElements}</ul>
     </div>
   );
-}
+};
 
 export default CryptoList;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {createRoot} from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -14,5 +14,4 @@ root.render(
   document.getElementById('root'),
 );
 
-
-reportWebVitals();
+reportWebVitals(console.log);
